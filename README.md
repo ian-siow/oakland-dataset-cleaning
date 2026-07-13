@@ -4,6 +4,8 @@ Pipeline cleaning the publicly available data (raw_oakland_data.csv) that detail
 Producing visualization based on two 2024 policy events
 - **Grants Pass v. Johnson** (SCOTUS, 2024-06-28) — permits criminalizing outdoor sleeping
 - **Newsom Executive Order** (2024-08-02) — directed CA agencies to clear encampments
+
+
 Linking sweep locations to a participant survey (Rootsdeidentify7_9.dta) to measure resident exposure to sweeps.
 
 
