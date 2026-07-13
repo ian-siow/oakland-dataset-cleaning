@@ -1,0 +1,41 @@
+Oakland EMT Data Cleaning Report
+Generated: 2026-07-09 12:56
+============================================================
+
+Input rows:    2201
+Input columns: ['LOCATION', 'DISTRICT', 'SENSITIVITY ZONE', 'INTERVENTION', 'OPERATION START DATE', 'OPERATION END DATE']
+
+Sensitivity zone distribution: {'High': 2068, 'Low': 133}
+Unparseable start dates: 0
+Date range: 2021-01-21 → 2025-11-24
+Policy era distribution: {'post_newsom_order': 1234, 'pre_grants_pass': 944, 'post_grants_pass': 23}
+
+── Intervention classification ──
+Primary categories:   {'Closure': 1831, 'Deep Cleaning': 347, 'Partial Closure': 16, 'Micro Closure': 5, 'Other': 2}
+Mixed interventions:  93
+Not executed:         23
+Self-closures:        3
+With outreach (AA):   17
+
+── Location classification ──
+Location types: {'intersection': 1756, 'named_place': 399, 'address': 46}
+Pre-geocoded (known places): 133 rows
+Unique locations total:      829
+Still need geocoding:        2068 rows
+
+Saved cleaned dataset → data/intermediate/encampment_cleaned.csv
+Output rows: 2201
+
+Saved geocoding queue → data/intermediate/encampment_to_geocode.csv
+Unique locations to geocode: 794
+
+── Verification ──
+All rows classified. No nulls in intervention_primary.
+All start dates parsed successfully.
+
+── Rows by policy era and primary intervention ──
+intervention_primary  Closure  Deep Cleaning  Micro Closure  Other  Partial Closure
+policy_era                                                                         
+post_grants_pass           21              1              0      0                1
+post_newsom_order        1222             12              0      0                0
+pre_grants_pass           588            334              5      2               15
